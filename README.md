@@ -13,7 +13,7 @@ El sistema combina:
 
 ---
 
-## 🚀 Flujo del sistema
+##  Flujo del sistema
 
 1. **Carga del PDF**  
    - El usuario sube un CV en formato PDF desde la interfaz de Streamlit.  
@@ -46,7 +46,7 @@ El sistema combina:
 
 ---
 
-## 🛠️ Requisitos
+## Requisitos
 
 - Python **3.9+**  
 - Librerías principales:  
@@ -54,7 +54,7 @@ El sistema combina:
   - `sentence-transformers`  
   - `streamlit`  
   - `openai`  
-  - `pinecone-client`  
+  - `pinecone`  
   - `pdfminer.six`  
   - `PyMuPDF`  
   - `langchain`  
@@ -83,5 +83,6 @@ El sistema combina:
 ## Ejecuciones en la consola de windows
 
 pip install -r requirements.txt
+
 
 python -m streamlit run chatbot_cv_final8_pdf.py
