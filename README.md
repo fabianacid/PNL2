@@ -1,6 +1,6 @@
 # Chatbot RAG sobre CV (Pinecone + OpenAI)
 
-Este proyecto implementa un chatbot que responde preguntas sobre tu CV en PDF usando **Retrieval-Augmented Generation (RAG)**.
+Este proyecto implementa un chatbot que responde preguntas sobre el CV en PDF que se carga usando **Retrieval-Augmented Generation (RAG)**.
 
 
   
@@ -61,7 +61,7 @@ El sistema combina:
 
 ---
 
-## ⚙️ Instalación
+##  Instalación
 
 1. Crear y activar un entorno virtual  
 
@@ -90,4 +90,5 @@ setx OPENAI_API_KEY "tu_clave_de_openai"
 
 
 python -m streamlit run chatbot_cv_final9_pdf.py
+
 
