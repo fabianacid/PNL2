@@ -85,10 +85,12 @@ El sistema combina:
 pip install -r requirements.txt
 
 setx PINECONE_API_KEY "tu_clave_de_pinecone"
+
 setx OPENAI_API_KEY "tu_clave_de_openai"
 
 
 
 python -m streamlit run chatbot_cv_final9_pdf.py
+
 
 
