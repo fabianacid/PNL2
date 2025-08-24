@@ -8,9 +8,9 @@ from langchain.docstore.document import Document
 from pdfminer.high_level import extract_text
 import streamlit as st
 
-# -----------------------------
+
 # CONFIGURACIÓN DE CLAVES
-# -----------------------------
+
 PINECONE_API_KEY = os.environ.get("PINECONE_API_KEY")
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
@@ -31,9 +31,9 @@ index = pc.Index(INDEX_NAME)
 embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
 AGENTE_ALUMNO = "maria fabiana cid"
 
-# -----------------------------
+
 # FUNCIONES AUXILIARES
-# -----------------------------
+
 def get_embedding(text):
     return embedding_model.encode(text).tolist()
 
@@ -49,9 +49,9 @@ def chunk_text(document, chunk_size=1000, chunk_overlap=200):
     splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
     return splitter.split_documents([document])
 
-# -----------------------------
-# FUNCIÓN CORREGIDA: RESPONDER POR PERSONA
-# -----------------------------
+
+# FUNCIÓN : RESPONDER POR PERSONA
+
 def responder_pregunta_por_persona(personas, question, index, model="gpt-3.5-turbo"):
     respuestas = {}
 
@@ -71,7 +71,7 @@ def responder_pregunta_por_persona(personas, question, index, model="gpt-3.5-tur
             respuestas[persona] = f"⚠️ No encontré información en el CV de {persona.title()}."
             continue
 
-        # 🔹 Limpiar menciones de otras personas
+        #  Limpiar menciones de otras personas
         for otra_persona in personas:
             if otra_persona != persona:
                 context = context.replace(otra_persona, "")
@@ -101,9 +101,9 @@ def responder_pregunta_por_persona(personas, question, index, model="gpt-3.5-tur
 
     return respuestas
 
-# -----------------------------
+
 # INTERFAZ STREAMLIT
-# -----------------------------
+
 st.title("📄 Chatbot Multi-Agente - CVs del equipo")
 
 if "personas" not in st.session_state:
@@ -162,3 +162,4 @@ if user_question:
         st.markdown(f"📌 **{persona.title()}:**")
         st.write(texto)
         st.markdown("---")
+
