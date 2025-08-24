@@ -17,22 +17,22 @@ Este proyecto implementa un **chatbot multiagente** que permite hacer preguntas 
 1) Creación entorno virtual
 
 
-python -m venv venv_agenteCV 
+    python -m venv venv_agenteCV 
 
-venv_agenteCV\Scripts\activate 
+    venv_agenteCV\Scripts\activate 
 
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 
 2) Configuración de variables de entorno
 
-export OPENAI_API_KEY="tu_api_key_openai"
+    export OPENAI_API_KEY="tu_api_key_openai"
 
-export PINECONE_API_KEY="tu_api_key_pinecone"
+    export PINECONE_API_KEY="tu_api_key_pinecone"
 
 3) Ejecución
 
-python -m streamlit run AgenteCV18.py
+    python -m streamlit run AgenteCV18.py
 
 
 ## Flujo del sistema
@@ -47,11 +47,11 @@ python -m streamlit run AgenteCV18.py
 
 5) Para cada persona:
 
-Consultar Pinecone y obtener fragmentos relevantes.
+    Consultar Pinecone y obtener fragmentos relevantes.
 
-Limpiar menciones de otros agentes.
+    Limpiar menciones de otros agentes.
 
-Generar respuesta con GPT basada solo en el contexto de esa persona.
+    Generar respuesta con GPT basada solo en el contexto de esa persona.
 
 6) Mostrar respuestas por persona en la interfaz.
 
@@ -60,6 +60,7 @@ Generar respuesta con GPT basada solo en el contexto de esa persona.
 ## Gráfico de Flujo
 
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/62b36a81-bb57-4903-9d6c-b80d4d97410f" />
+
 
 
 
