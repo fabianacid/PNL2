@@ -1,6 +1,6 @@
 # Chatbot Multi-Agente - CVs del equipo
 
-Este proyecto implementa un **chatbot multiagente** que permite hacer preguntas sobre los CVs de un equipo, respondiendo **solo con la información de cada persona**.En el caso de nombrar a nadie en la pregunta, se responde sobre el alumno (Maria Fabiana Cid).
+Este proyecto implementa un **chatbot multiagente** que permite hacer preguntas sobre los CVs de un equipo, respondiendo **solo con la información de cada persona**.En el caso de no nombrar a nadie en la pregunta, se responde sobre el alumno (Maria Fabiana Cid).
 
 ## Características
 
@@ -60,6 +60,7 @@ Este proyecto implementa un **chatbot multiagente** que permite hacer preguntas 
 ## Gráfico de Flujo
 
 <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/62b36a81-bb57-4903-9d6c-b80d4d97410f" />
+
 
 
 
